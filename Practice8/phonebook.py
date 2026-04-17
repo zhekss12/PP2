@@ -3,15 +3,8 @@ from config import load_config
 
 def create_table():
     """Create the phonebook table if it doesn't exist."""
-    commands = (
-        """
-        CREATE TABLE IF NOT EXISTS phonebook (
-        id SERIAL PRIMARY KEY,
-        username VARCHAR(50) UNIQUE NOT NULL,
-        phone VARCHAR(20) NOT NULL
-        );
-        """
-    )
+    # Я переписал это без лишних отступов и скрытых символов
+    commands = "CREATE TABLE IF NOT EXISTS phonebook (id SERIAL PRIMARY KEY, username VARCHAR(50) UNIQUE NOT NULL, phone VARCHAR(20) NOT NULL);"
     conn = None
     try:
         config = load_config()
@@ -26,7 +19,6 @@ def create_table():
     finally:
         if conn is not None:
             conn.close()
-
 def ups():
     username = input("Enter username: ")
     phone = input("Enter phone: ")
