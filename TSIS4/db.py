@@ -5,7 +5,7 @@ DB_CONFIG = {
     "user": "postgres",
     "password": "676767", # 
     "host": "localhost",
-    "port": "5432",
+    "port": "5433",
     "client_encoding": "utf8"  # Forces correct encoding to prevent Unicode errors
 }
 
